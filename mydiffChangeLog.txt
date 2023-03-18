@@ -1,0 +1,41 @@
+Reference Database: root@localhost @ jdbc:mysql://localhost:3306/db_test (Default Schema: db_test)
+Comparison Database: root@localhost @ jdbc:mysql://localhost:3306/db (Default Schema: db)
+Compared Schemas: db_test -> db
+Product Name: EQUAL
+Product Version: EQUAL
+Missing Catalog(s): NONE
+Unexpected Catalog(s): NONE
+Changed Catalog(s): NONE
+Missing Column(s): NONE
+Unexpected Column(s): 
+     db.villains.ID
+     db.villains.LOCATION
+     db.villains.NAME
+     db.villains.SPECIE
+     db.villains.TEAMMATE
+     db.villains.WEAPON
+Changed Column(s): NONE
+Missing Foreign Key(s): NONE
+Unexpected Foreign Key(s): NONE
+Changed Foreign Key(s): NONE
+Missing Index(s): NONE
+Unexpected Index(s): 
+     PRIMARY UNIQUE  ON db.villains(ID)
+Changed Index(s): NONE
+Missing Primary Key(s): NONE
+Unexpected Primary Key(s): 
+     PRIMARY on db.villains(ID)
+Changed Primary Key(s): NONE
+Missing Sequence(s): NONE
+Unexpected Sequence(s): NONE
+Changed Sequence(s): NONE
+Missing Table(s): NONE
+Unexpected Table(s): 
+     villains
+Changed Table(s): NONE
+Missing Unique Constraint(s): NONE
+Unexpected Unique Constraint(s): NONE
+Changed Unique Constraint(s): NONE
+Missing View(s): NONE
+Unexpected View(s): NONE
+Changed View(s): NONE

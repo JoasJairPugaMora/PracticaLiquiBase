@@ -1,0 +1,27 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <changeSet author="Joas (generated)" id="2">
+        <createTable tableName="VILLAINS">
+            <column autoIncrement="true" name="ID" type="INT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="CONSTRAINT_6"/>
+            </column>
+            <column name="NAME" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="WEAPON" type="VARCHAR(30)"/>
+            <column name="LOCATION" type="VARCHAR(30)"/>
+            <column name="SPECIE" type="VARCHAR(30)"/>
+            <column name="TEAMMATE" type="VARCHAR(50)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="Joas" id="3">
+        <createProcedure>
+        INSERT INTO VILLAINS(ID ,NAME, WEAPON , SPECIE, TEAMMATE) VALUES(1, 'Joker', 'Guns', 'Human', 'Harley Quinn');
+        INSERT INTO superheroes(ID ,NAME, RIVAL, SUPERPOWER, LOCATION) VALUES ('1', 'Superman', 'Lex Luthor', 'Strength', 'Metropoli');        
+        INSERT INTO Superheroes(ID ,NAME, RIVAL , SUPERPOWER, LOCATION) VALUES(2, 'Flash', 'Zoom', 'Speed', 'Central City');
+            <rollback>
+                DELETE FROM VILLAINS;
+            </rollback>
+        </createProcedure>
+      </changeSet>
+</databaseChangeLog>
